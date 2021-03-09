@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+#index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20vh 10vh 100vh 10vh;
+    grid-template-areas:
+    'hd hd hd'
+    'na na na'
+    'ma ma as'
+    'ft ft ft'
+    ;
+}
+#nykommande_byggnader {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20vh 10vh 100vh 10vh;
+    grid-template-areas:
+    'hd hd hd'
+    'na na na'
+    'ma ma as'
+    'ft ft ft'
+    ;
+}
+#om_oss {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20vh 10vh 100vh 10vh;
+    grid-template-areas:
+    'hd hd hd'
+    'na na na'
+    'ma ma as'
+    'ft ft ft'
+    ;
+}
+#sok_bostad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20vh 10vh 100vh 10vh;
+    grid-template-areas:
+    'hd hd hd'
+    'na na na'
+    'd1 d2 d3'
+    'ft ft ft'
+    ;
+}
+#sok_lista {
+    grid-area: d1;
+}
+#sok_karta {
+    grid-area: d2;
+}
+#sok_filter {
+    grid-area: d3;
+}
+#statistik {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20vh 10vh 100vh 10vh;
+    grid-template-areas:
+    'hd hd hd'
+    'na na na'
+    'ms ms ms'
+    'ft ft ft'
+    ;
+}
+#main_stat {
+    grid-area: ms;
+}
+header {
+    grid-area: hd;
+}
+#head {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    float: right;
+    margin-right: 5vw;
+}
+aside {
+    grid-area: as;
+    background: salmon;
+    border: royalblue;
+    border-width: 5px;
+}
+#navi {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10vw 0 10vw;
+}
+nav {
+    grid-area: na;
+    background: rgb(250, 105, 105);
+}
+.navhead {
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    display: flex;
+    padding: 10vh 2vw 0 2vw;
+}
+.navnav {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
