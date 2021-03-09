@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 #index {
     display: grid;
@@ -57,16 +58,54 @@
 #statistik {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 20vh 10vh 100vh 10vh;
+    grid-template-rows: 20vh 10vh 25vh 150vh 10vh;
     grid-template-areas:
     'hd hd hd'
     'na na na'
+    'ar ar ar'
     'ms ms ms'
     'ft ft ft'
     ;
 }
+article {
+    grid-area: ar;
+}
 #main_stat {
     grid-area: ms;
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 0 2vw 0 2vw;
+    grid-template-areas:
+    'hy hy mo ko'
+    'hy hy su su'
+    'ti ti se se'
+    ;
+}
+#hyra {
+    grid-area: hy;
+    background: salmon;
+    max-width: 50vw;
+}
+#tid {
+    grid-area: ti;
+    background: salmon;
+}
+#monad {
+    grid-area: mo;
+    background: salmon;
+}
+#ko {
+    grid-area: ko;
+    background: salmon;
+}
+#summering {
+    grid-area: su;
+    background: salmon;
+}
+#senaste {
+    grid-area: se;
+    background: salmon;
 }
 header {
     grid-area: hd;
@@ -106,4 +145,5 @@ nav {
     text-decoration: none;
     color: black;
     display: inline-block;
+    padding-top: 20px;
 }
