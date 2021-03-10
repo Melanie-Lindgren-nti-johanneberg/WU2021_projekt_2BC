@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
 }
 #index {
     display: grid;
@@ -20,9 +22,44 @@
     grid-template-areas:
     'hd hd hd'
     'na na na'
-    'ma ma as'
+    'ma ma ma'
     'ft ft ft'
     ;
+}
+main {
+    grid-area: ma;
+}
+.hem_extra {
+    margin: 0 2vw 0 2vw;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 15px;
+    display: block;
+    max-width: 1360px;
+}
+.hem_extra_ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+}
+.hem_extra_li {
+    padding-right: 4px;
+}
+.hem_extra_li_2 {
+    font-weight: 700;
+}
+.hem_extra_li_2::before {
+    content: "/";
+    padding: 0 10px 0 10px;
+}
+a {
+    text-decoration: none;
+    color: rgb(29, 29, 212);
+}
+img {
+    height: 100px;
+    width: 90vw;
 }
 #om_oss {
     display: grid;
@@ -37,13 +74,14 @@
 }
 #sok_bostad {
     display: grid;
+    overflow-y: hidden;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 20vh 10vh 100vh 10vh;
+    grid-template-rows: 20vh 10vh 70vh;
     grid-template-areas:
     'hd hd hd'
     'na na na'
-    'd1 d2 d3'
-    'ft ft ft'
+    'd2 d2 d3'
+    /* 'd1 d2 d3' */
     ;
 }
 #sok_lista {
@@ -54,6 +92,103 @@
 }
 #sok_filter {
     grid-area: d3;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 30px;
+    position: relative;
+    margin-left: 60px;
+    background-color: rgb(247, 247, 247);
+    /* overflow: scroll; */
+}
+.insok_filter {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+}
+.insok_filter::-webkit-scrollbar {
+    width: 4px
+}
+.insok_filter::-webkit-scrollbar-thumb {
+    background: rgb(197, 197, 197);
+}
+.insok_filter::-webkit-scrollbar-thumb:hover {
+    background: rgb(173, 173, 173);
+}
+.insok_filter::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+}
+.ininsok_filter {
+    margin-bottom: 40px;
+}
+.filterbutton {
+    cursor: pointer;
+    float: right;
+    border: none;
+    background: none;
+    color: rgb(29, 29, 212);
+    text-decoration: underline;
+}
+.filterbutton:active {
+    border: none;
+}
+legend {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+.checkbox {
+    display: flex;
+    padding: 15px 0 16px 0;    
+    align-items: center;
+}
+.incheckbox {
+    height: 25px;
+    width: 25px;
+}
+.labelalla {
+    padding-left: 10px;
+    font-family: sans-serif;
+}
+.titel {
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+.ininantalrum {
+    display: flex;
+    justify-content: space-between;
+}
+.antalrum {
+    padding: 10px 10px;
+    border-radius: 3px;
+    font-size: 20px;
+}
+#maxhyra {
+    padding-right: 160px;
+}
+.filterfooter {
+    display: flex;
+    padding: 10px 30px;
+    border-top-color: salmon;
+    border-top-width: 5px;
+    border-top-style: solid;
+    background-color: white;
+    font-family: sans-serif;
+    position: relative;
+    align-items: center;
+    font-weight: bolder;
+}
+#filtrerabutton {
+    margin-left: 60px;
+    padding: 15px 35px;
+    background-color: salmon;
+    border-color: rgb(240, 221, 221);
+    border-radius: 3px;
+    border-width: 5px;
 }
 #statistik {
     display: grid;
@@ -69,6 +204,13 @@
 }
 article {
     grid-area: ar;
+    bottom: 0;
+    position: absolute;
+}
+h1 {
+    display: block;
+    font-family: sans-serif;
+    font-weight: 900;
 }
 #main_stat {
     grid-area: ms;
@@ -76,6 +218,8 @@ article {
     column-gap: 10px;
     row-gap: 10px;
     margin: 0 2vw 0 2vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
     'hy hy mo ko'
     'hy hy su su'
@@ -112,10 +256,10 @@ header {
 }
 #head {
     text-decoration: none;
-    list-style-type: none;
+    list-style: none;
     display: flex;
     float: right;
-    margin-right: 5vw;
+    margin-right: 2vw;
 }
 aside {
     grid-area: as;
@@ -123,27 +267,35 @@ aside {
     border: royalblue;
     border-width: 5px;
 }
-#navi {
-    text-decoration: none;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10vw 0 10vw;
-}
-nav {
-    grid-area: na;
-    background: rgb(250, 105, 105);
-}
 .navhead {
     text-decoration: none;
     color: black;
     list-style: none;
     display: flex;
-    padding: 10vh 2vw 0 2vw;
+    padding: 13vh 2vw 0 2vw;
+    font-family: sans-serif;
+}
+.mainnav {
+    grid-area: na;
+    background: salmon;
+    display: flex;
+    align-items: center;
+}
+#navi {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
 }
 .navnav {
     text-decoration: none;
-    color: black;
-    display: inline-block;
-    padding-top: 20px;
+    color: white;
+    padding: 17.5px 70px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.navnav:hover {
+    background-color: rgb(180, 57, 43);
+    color: white;
 }

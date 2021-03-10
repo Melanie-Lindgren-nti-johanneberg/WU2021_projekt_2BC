@@ -15,7 +15,7 @@
                 <li><a class="navhead" href="#">Logga in</a></li>
             </ul>
         </header>
-        <nav>
+        <nav class="mainnav">
             <ul id="navi">
                 <li><a class="navnav" href="sok_bostad.html">Sök bostad</a></li>
                 <li><a class="navnav" href="nykommande_byggnader.html">Nykommande bostäder</a></li>
@@ -23,10 +23,98 @@
                 <li><a class="navnav" href="om_oss.html">Om oss</a></li>
             </ul>
         </nav>
-        <div id="sok_lista"></div>
-        <div id="sok_karta"></div>
-        <div id="sok_filter"></div>
-        <footer></footer>
+        <!-- <div id="sok_lista">
+            <ul id="soklist">
+                <li>
+                    <label for="sortering"><strong>0 av 212</strong> bostäder sorteras på</label>
+                    <select id="sortering" class="titel">
+                        <option value="">Senaste annonserade</option>
+                        <option value="">Lägst hyra först</option>
+                        <option value="">Högst hyra först</option>
+                        <option value="">Minst rum först</option>
+                        <option value="">Flest rum först</option>
+                        <option value="">Kommun A-Ö</option>
+                    </select>
+                </li>
+                <li>
+
+                </li>
+            </ul>
+        </div> -->
+        <div id="sok_karta">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7663937.3601750955!2d17.37855505!3d62.0329754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1615377158852!5m2!1ssv!2sse" width="912" height="405" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7663937.3601750955!2d17.37855505!3d62.0329754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1615377158852!5m2!1ssv!2sse" width="600" height="405" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+        </div>
+        <div id="sok_filter">
+            <div class="insok_filter">
+                <button class="filterbutton">Rensa filter</button>
+                <div class="filterdiv">
+                    <div class="ininsok_filter">
+                        <div class="titel">
+                            <legend>Boendetyp</legend>
+                        <div class="checkbox">
+                            <input type="checkbox" id="alla" name="alla" class="incheckbox">
+                            <label for="alla" class="labelalla">Alla (212)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="vanliga" name="vanliga" class="incheckbox">
+                            <label for="vanliga" class="labelalla">Vanliga (140)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="ungdom" name="ungdom" class="incheckbox">
+                            <label for="ungdom" class="labelalla">Ungdom (56)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="student" name="student" class="incheckbox">
+                            <label for="student" class="labelalla">Student (14)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="senior" name="senior" class="incheckbox">
+                            <label for="senior" class="labelalla">Senior (2)</label>
+                        </div>
+                    </div>
+                    <div class="titel">
+                        <legend>Antal rum</legend>
+                        <div class="ininantalrum">
+                            <select name="minantalrum" class="antalrum" autocomplete="off"> <!-- kan behövas class="" -->
+                                <option value selected>Min</option>
+                                <option value="1">Min 1 rum</option>
+                                <option value="2">Min 2 rum</option>
+                                <option value="3">Min 3 rum</option>
+                                <option value="4">Min 4 rum</option>
+                                <option value="5">Min 5 rum</option>
+                            </select>
+                            <select name="maxantalrum" class="antalrum" autocomplete="off"> <!-- kan behövas class="" -->
+                                <option value selected>Max</option>
+                                <option value="1">Max 1 rum</option>
+                                <option value="2">Max 2 rum</option>
+                                <option value="3">Max 3 rum</option>
+                                <option value="4">Max 4 rum</option>
+                                <option value="5">Max 5 rum</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="titel" style="width:200px;">
+                        <legend>Hyra</legend>
+                        <select name="maxhyra" id="maxhyra" class="antalrum" autocomplete="off">
+                            <option value selected>Max</option>
+                            <option value="5000">Max 5 000 kr</option>
+                            <option value="10000">Max 10 000 kr</option>
+                            <option value="15000">Max 15 000 kr</option>
+                            <option value="20000">Max 20 000 kr</option>
+                            <option value="25000">Max 25 000 kr</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="filterfooter">
+                <div class="gridauto">212 bostäder</div>
+                <div>
+                    <button type="button" name="filterbutton" id="filtrerabutton">Filtrera</button>
+                </div>
+        </footer>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
