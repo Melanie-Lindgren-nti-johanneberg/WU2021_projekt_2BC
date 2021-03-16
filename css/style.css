@@ -66,7 +66,7 @@ img {
 #om_oss {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 20vh 10vh auto 150vh 10vh;
+    grid-template-rows: 20vh 10vh auto auto 10vh;
     grid-template-areas:
     'hd hd hd'
     'na na na'
@@ -124,7 +124,18 @@ h3 {
     font-family: sans-serif;
     letter-spacing: 1.5px;
 }
-.inarticle_p
+.inarticle_p {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+.inarticle_a {
+    font-family: sans-serif;
+    text-decoration-line: underline;
+    font-size: 20px;
+    letter-spacing: 1.3px;
+}
 #inarticle1 {
     grid-area: a1;
 }
