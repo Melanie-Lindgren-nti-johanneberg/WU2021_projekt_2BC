@@ -7,13 +7,65 @@
 #index {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 20vh 10vh 100vh 10vh;
+    grid-template-rows: 20vh 10vh 70vh auto 100vh 10vh;
     grid-template-areas:
     'hd hd hd'
     'na na na'
     'ma ma as'
+    'md md md'
+    'm2 m2 a6'
     'ft ft ft'
     ;
+}
+.index_main {
+    grid-area: ma;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* .index_main {
+    
+} */
+.overindex_h1 {
+    display: flex;
+    align-items: center;
+}
+.index_tal_h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100px;
+    color: #333333;
+    margin: 5px;
+    font-weight: normal;
+}
+.index_h1 {
+    font-family: sans-serif;
+    font-size: 50px;
+    color: #333333;
+    margin: 5px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+}
+.din_senaste_sökning {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+}
+.index_aside {
+    grid-area: as;
+    border-left: rgba(192, 54, 54, 0.664);
+    border-width: 3px;
+    border-left-style: dashed;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mitten_del {
+    grid-area: md;
+    border-bottom: rgba(192, 54, 54, 0.664);
+    border-bottom-width: 1.5px;
+    border-bottom-style: solid;
+    margin: 0 20px 0 20px;
 }
 #nykommande_byggnader {
     display: grid;
@@ -25,9 +77,6 @@
     'ma ma ma'
     'ft ft ft'
     ;
-}
-main {
-    grid-area: ma;
 }
 .hem_extra {
     margin: 0 1vw 0 1vw;
@@ -74,6 +123,9 @@ img {
     'oa oa oa'
     'ft ft ft'
     ;
+}
+main {
+    grid-area: ma;
 }
 .om_oss_div {
     display: flex;
@@ -369,14 +421,8 @@ header {
     position: absolute;
     right: 0;
 }
-/* .dum_header {
-    margin-right: 17px; ???
-} */
-aside {
-    grid-area: as;
-    background: salmon;
-    border: royalblue;
-    border-width: 5px;
+.dum_header {
+    margin-right: 17px;
 }
 .ikon_li {
     display: flex;
