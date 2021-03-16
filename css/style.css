@@ -66,13 +66,79 @@ img {
 #om_oss {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 20vh 10vh 100vh 10vh;
+    grid-template-rows: 20vh 10vh auto 150vh 10vh;
     grid-template-areas:
     'hd hd hd'
     'na na na'
-    'ma ma as'
+    'ma ma ma'
+    'oa oa oa'
     'ft ft ft'
     ;
+}
+.om_oss_div {
+    display: flex;
+    align-items: center;
+    margin-top: 33px;
+}
+.om_oss_h1 {
+    display: block;
+    font-family: sans-serif;
+    font-size: 48px;
+    letter-spacing: 1.5px;
+    color: #333333;
+    margin-left: 2vw;
+    margin-bottom: 20px;
+}
+p {
+    max-width: 60ch;
+    margin-left: 2vw;
+    font-family: sans-serif;
+    color: #333333;
+    font-size: 20px;
+    line-height: 1.7;
+    letter-spacing: 1.2px;
+}
+.proffsig_byggnad {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    margin-right: 2vw;
+}
+.om_oss_article {
+    display: grid;
+    grid-area: oa;
+    margin-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    'a1 a2'
+    'a3 a4'
+    'a5 a5'
+    ;
+}
+.inarticlealla {
+    margin: 50px;
+}
+h3 {
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+}
+.inarticle_p
+#inarticle1 {
+    grid-area: a1;
+}
+#inarticle2 {
+    grid-area: a2;
+}
+#inarticle3 {
+    grid-area: a3;
+}
+#inarticle4 {
+    grid-area: a4;
+}
+#inarticle5 {
+    grid-area: a5;
 }
 #sok_bostad {
     display: grid;
@@ -205,11 +271,11 @@ legend {
     'ft ft ft'
     ;
 }
-article {
+.statistik_article {
     grid-area: ar;
     position: relative;
 }
-h1 {
+.statistik_h1 {
     display: block;
     font-family: sans-serif;
     font-size: 48px;
