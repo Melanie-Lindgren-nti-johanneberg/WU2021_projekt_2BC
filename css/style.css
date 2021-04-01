@@ -5,11 +5,11 @@
     /* overflow-x: hidden; */
 }
 /*rem em*/
-@media screen and (min-width: 761px) /*Dator*/ {
+@media screen and (min-width: 801px) /*Dator*/ {
     #index {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 20vh 10vh 70vh auto 100vh 10vh;
+        grid-template-rows: 20vh 10vh 70vh auto 100vh auto;
         grid-template-areas:
         'hd hd hd'
         'na na na'
@@ -48,7 +48,7 @@
         font-weight: normal;
         letter-spacing: 1.2px;
     }
-    .din_senaste_sökning {
+    .din_senaste_sokning {
         font-family: sans-serif;
         font-size: 20px;
         font-weight: lighter;
@@ -78,7 +78,7 @@
     #nykommande_byggnader {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 20vh 10vh 100vh 10vh;
+        grid-template-rows: 20vh 10vh 100vh auto;
         grid-template-areas:
         'hd hd hd'
         'na na na'
@@ -111,7 +111,7 @@
         content: "/";
         padding: 0 10px 0 10px;
     }
-    a {
+    .hem_igen_a {
         text-decoration: none;
         color: rgb(192, 54, 54);
         /* color: rgb(29, 29, 212); */
@@ -123,7 +123,7 @@
     #om_oss {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 20vh 10vh auto auto 10vh;
+        grid-template-rows: 20vh 10vh auto auto auto;
         grid-template-areas:
         'hd hd hd'
         'na na na'
@@ -149,14 +149,14 @@
         margin-left: 2vw;
         margin-bottom: 20px;
     }
-    p {
+    .om_oss_p {
         max-width: 60ch;
-        margin-left: 2vw;
         font-family: sans-serif;
         color: #333333;
         font-size: 20px;
         line-height: 1.7;
         letter-spacing: 1.2px;
+        margin-left: 2vw;
     }
     .proffsig_byggnad {
         width: 500px;
@@ -188,13 +188,20 @@
         margin-left: 0;
         margin-top: 10px;
         margin-bottom: 10px;
-        line-height: 1.3;
+        max-width: 60ch;
+        font-family: sans-serif;
+        color: #333333;
+        font-size: 20px;
+        line-height: 1.7;
+        letter-spacing: 1.2px;
     }
     .inarticle_a {
         font-family: sans-serif;
         text-decoration-line: underline;
         font-size: 20px;
         letter-spacing: 1.3px;
+        color: rgb(192, 54, 54);
+
     }
     #inarticle1 {
         grid-area: a1;
@@ -337,7 +344,7 @@
     #statistik {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 20vh 10vh 25vh 150vh 10vh;
+        grid-template-rows: 20vh 10vh 25vh 150vh auto;
         grid-template-areas:
         'hd hd hd'
         'na na na'
@@ -358,16 +365,17 @@
         color: #333333;
         position: absolute;
         bottom: 0;
-        margin-left: 2vw;
+        margin-left: 30px;
     }
     #main_stat {
         grid-area: ms;
         margin-top: 100px;
+        padding-bottom: 30px;
         display: grid;
         color: white;
         column-gap: 15px;
         row-gap: 15px;
-        margin: 0 2vw 0 2vw;
+        margin: 0 30px 0 30px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
@@ -385,6 +393,8 @@
         font-family: sans-serif;
         font-size: 20px;
         font-weight: 700;
+        cursor: pointer;
+        
     }
     .main_stat_indiv {
         display: flex;
@@ -436,6 +446,9 @@
     .dum_header {
         margin-right: 17px;
     }
+    .menu-button {
+        display: none;
+    }
     .ikon_li {
         display: flex;
     }
@@ -480,20 +493,63 @@
         background-color: rgb(192, 54, 54);
         color: white;
     }
+    #mobile_nav {
+        display: none;
+    }
+    .foot {
+        grid-area: ft;
+        background: rgb(247, 226, 224);
+        border-top: rgb(212, 192, 189);
+        border-top-width: 1px;
+        border-top-style: solid;
+    }
+    .big_foot {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 60px 0 40px 0;
+        color: #333333;
+    }
+    .inoutfoot {
+        padding: 0 20px 0 20px;
+    }
+    .infoot {
+        display: flex;
+        flex-direction: column;
+        font-family: sans-serif;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        line-height: 1.6;
+    }
+    .footer_title {
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+    .small_foot {
+        padding: 5px 0 5px 0;
+    }
+    .footer_p {
+        max-width: 29ch;
+    }
 }
 
 
 
 
-@media screen and (max-width: 760px) /*Mobil*/ {
+
+
+
+@media screen and (max-width: 800px) /*Mobil*/ {
     #index {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 20vh 10vh 70vh auto 100vh 10vh;
+        grid-template-rows: 100px 3px auto auto 20px 10vh auto;
         grid-template-areas:
         'hd hd hd'
         'na na na'
-        'ma ma as'
+        'ma ma ma'
+        'as as as'
         'md md md'
         'm2 m2 a6'
         'ft ft ft'
@@ -505,6 +561,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        min-height: 200px;
     }
     /* .index_main {
         
@@ -515,18 +572,18 @@
     }
     .index_tal_h1 {
         font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 100px;
+        font-size: 65px;
         color: #333333;
         margin: 5px;
         font-weight: normal;
     }
     .index_h1 {
         font-family: sans-serif;
-        font-size: 50px;
+        font-size: 30px;
         color: #333333;
         margin: 5px;
         font-weight: normal;
-        letter-spacing: 1.2px;
+        font-weight: 700;
     }
     .din_senaste_sokning {
         font-family: sans-serif;
@@ -536,9 +593,6 @@
     }
     .index_aside {
         grid-area: as;
-        border-left: rgba(192, 54, 54, 0.664);
-        border-width: 3px;
-        border-left-style: dashed;
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -629,15 +683,6 @@
         margin-left: 2vw;
         margin-bottom: 20px;
     }
-    p {
-        max-width: 60ch;
-        margin-left: 2vw;
-        font-family: sans-serif;
-        color: #333333;
-        font-size: 20px;
-        line-height: 1.7;
-        letter-spacing: 1.2px;
-    }
     .proffsig_byggnad {
         width: 500px;
         height: auto;
@@ -668,13 +713,18 @@
         margin-left: 0;
         margin-top: 10px;
         margin-bottom: 10px;
-        line-height: 1.3;
+        max-width: 60ch;
+        font-family: sans-serif;
+        color: #333333;
+        font-size: 20px;
+        letter-spacing: 1.2px;
     }
     .inarticle_a {
         font-family: sans-serif;
         text-decoration-line: underline;
         font-size: 20px;
         letter-spacing: 1.3px;
+        color: rgb(192, 54, 54);
     }
     #inarticle1 {
         grid-area: a1;
@@ -865,6 +915,7 @@
         font-family: sans-serif;
         font-size: 20px;
         font-weight: 700;
+        cursor: pointer;
     }
     .main_stat_indiv {
         display: flex;
@@ -901,23 +952,41 @@
     }
     header {
         grid-area: hd;
-        position: relative;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
     #head {
         text-decoration: none;
         list-style: none;
         display: flex;
-        float: right;
-        position: absolute;
-        right: 0;
     }
     .dum_header {
         margin-right: 17px;
     }
+    .menu-button {
+        display: flex;
+        margin: 0 20px 0 20px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .meny_ikon {
+        width: 40px;
+        height: 40px;
+        margin: 10px
+    }
+    #material-icons {
+        text-decoration: none;
+        font-family: sans-serif;
+        margin: 0;
+        font-size: 15px;
+    }
     .ikon_li {
         display: flex;
+    }
+    #ikon_li_bort {
+        display: none;
     }
     .navhead {
         text-decoration: none;
@@ -941,20 +1010,23 @@
         background: salmon;
         display: flex;
         align-items: center;
-        display: none;
     }
     #navi {
         text-decoration: none;
         list-style: none;
-        display: flex;
+        display: none;
     }
     .mobile_nav {
-        background-color: turquoise;
         height: 100%;
-        width: 80%;
         position: fixed;
         top: 0;
         right: 0;
+        width: 1000px;
+        background: rgb(0, 0, 0);
+        /* left: -90vw; */
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        /* z-index: 10; */
     }
     .navnav {
         text-decoration: none;
@@ -968,5 +1040,41 @@
     .navnav:hover {
         background-color: rgb(192, 54, 54);
         color: white;
+    }
+    .foot {
+        grid-area: ft;
+        background: rgb(247, 226, 224);
+        border-top: rgb(212, 192, 189);
+        border-top-width: 1px;
+        border-top-style: solid;
+    }
+    .big_foot {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 60px 0 40px 0;
+        color: #333333;
+    }
+    .inoutfoot {
+        padding: 0 20px 0 20px;
+    }
+    .infoot {
+        display: flex;
+        flex-direction: column;
+        font-family: sans-serif;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        line-height: 1.6;
+    }
+    .footer_title {
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+    .small_foot {
+        padding: 5px 0 5px 0;
+    }
+    .footer_p {
+        max-width: 29ch;
     }
 }
