@@ -46,31 +46,34 @@
         <div id="sok_karta">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7663937.3601750955!2d17.37855505!3d62.0329754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1615377158852!5m2!1ssv!2sse" style="border:0;" allowfullscreen="" loading="fast"></iframe> <!--width="912" height="405"-->
         </div>
+        <div class="menu-button" >
+            <p id="material-icons">Visa filter</p>
+        </div>
         <div id="sok_filter">
             <div class="insok_filter">
                 <button class="filterbutton">Rensa filter</button>
                 <div class="filterdiv">
                     <div class="ininsok_filter">
-                        <div class="titel">
+                        <div class="titel_checkboxes">
                             <legend>Boendetyp</legend>
                         <div class="checkbox">
-                            <input type="checkbox" id="alla" name="alla" class="incheckbox">
+                            <input type="checkbox" id="alla" class="incheckbox">
                             <label for="alla" class="labelalla">Alla (212)</label>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" id="vanliga" name="vanliga" class="incheckbox">
+                            <input type="checkbox" id="vanliga" class="incheckbox">
                             <label for="vanliga" class="labelalla">Vanliga (140)</label>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" id="ungdom" name="ungdom" class="incheckbox">
+                            <input type="checkbox" id="ungdom" class="incheckbox">
                             <label for="ungdom" class="labelalla">Ungdom (56)</label>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" id="student" name="student" class="incheckbox">
+                            <input type="checkbox" id="student" class="incheckbox">
                             <label for="student" class="labelalla">Student (14)</label>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" id="senior" name="senior" class="incheckbox">
+                            <input type="checkbox" id="senior" class="incheckbox">
                             <label for="senior" class="labelalla">Senior (2)</label>
                         </div>
                     </div>
@@ -95,7 +98,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="titel" style="width:200px;">
+                    <div class="titel">
                         <legend>Hyra</legend>
                         <select name="maxhyra" id="maxhyra" class="antalrum" autocomplete="off">
                             <option value selected>Max</option>

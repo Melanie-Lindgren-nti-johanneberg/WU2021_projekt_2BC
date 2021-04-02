@@ -228,7 +228,6 @@
         'hd hd hd'
         'na na na'
         'd2 d2 d3'
-        /* 'd1 d2 d3' */
         ;
     }
     #sok_lista {
@@ -305,16 +304,20 @@
         padding-left: 10px;
         font-family: sans-serif;
     }
-    .titel {
+    .titel_checkboxes {
         margin-top: 5px;
         margin-bottom: 40px;
+        width: 200px;
+    }
+    .titel {
+        margin-bottom: 30px;
     }
     .ininantalrum {
         display: flex;
         justify-content: space-between;
     }
     .antalrum {
-        padding: 10px 10px;
+        padding: 10px;
         border-radius: 3px;
         font-size: 20px;
     }
@@ -625,7 +628,7 @@
         margin: 0 1vw 0 1vw;
         padding: 20px;
         font-family: sans-serif;
-        font-size: 15px;
+        font-size: 20px;
         display: block;
         max-width: 1360px;
         letter-spacing: 1.2px;
@@ -672,8 +675,9 @@
     }
     .om_oss_div {
         display: flex;
-        align-items: center;
         margin-top: 33px;
+        flex-direction: column;
+        align-items: center;
     }
     .om_oss_h1 {
         display: block;
@@ -681,27 +685,25 @@
         font-size: 48px;
         letter-spacing: 1.5px;
         color: #333333;
-        margin-left: 2vw;
         margin-bottom: 20px;
+        margin: 20px;
+    }
+    .om_oss_p {
+        max-width: 50ch;
+        font-family: sans-serif;
+        color: #333333;
+        font-size: 20px;
+        line-height: 1.7;
+        letter-spacing: 1.2px;
+        margin: 20px;
     }
     .proffsig_byggnad {
-        width: 500px;
+        width: 550px;
         height: auto;
-        position: absolute;
-        right: 0;
-        margin-right: 2vw;
+        margin: 20px;
     }
     .om_oss_article {
-        display: grid;
         grid-area: oa;
-        margin-top: 50px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-        'a1 a2'
-        'a3 a4'
-        'a5 a5'
-        ;
     }
     .inarticlealla {
         margin: 50px;
@@ -746,12 +748,11 @@
         display: grid;
         overflow-y: hidden;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 100px 3px 70vh;
+        grid-template-rows: 100px 3px 100vh;
         grid-template-areas:
         'hd hd hd'
         'na na na'
-        'd2 d2 d3'
-        /* 'd1 d2 d3' */
+        'd2 d2 d2'
         ;
     }
     #sok_lista {
@@ -761,11 +762,10 @@
         grid-area: d2;
     }
     iframe {
-        width: 500px;
-        height: 400px;
+        width: 100vw;
+        height: 100%;
     }
     #sok_filter {
-        grid-area: d3;
         display: flex;
         flex-basis: auto;
         flex-direction: column;
@@ -827,16 +827,20 @@
         padding-left: 10px;
         font-family: sans-serif;
     }
-    .titel {
+    .titel_checkboxes {
         margin-top: 5px;
         margin-bottom: 40px;
+        width: 200px;
+    }
+    .titel {
+        margin-bottom: 30px;
     }
     .ininantalrum {
         display: flex;
         justify-content: space-between;
     }
     .antalrum {
-        padding: 10px 10px;
+        padding: 10px;
         border-radius: 3px;
         font-size: 20px;
     }
@@ -867,7 +871,7 @@
     #statistik {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 100px 3px 25vh 150vh auto;
+        grid-template-rows: 100px 3px 200px auto auto;
         grid-template-areas:
         'hd hd hd'
         'na na na'
@@ -892,18 +896,18 @@
     }
     #main_stat {
         grid-area: ms;
-        margin-top: 100px;
         display: grid;
         color: white;
         column-gap: 15px;
         row-gap: 15px;
-        margin: 0 2vw 0 2vw;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        margin: 10px 2vw 20px 2vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
-        'hy hy mo ko'
-        'hy hy su su'
-        'ti ti se se'
+        'hy hy'
+        'mo ko'
+        'su su'
+        'ti se'
         ;
     }
     #main_stat_div {
@@ -913,9 +917,12 @@
         display: flex;
         flex-direction: column;
         font-family: sans-serif;
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 19px;
         cursor: pointer;
+        padding: 40px;
+        line-height: 1.4;
+        letter-spacing: 1.2px;
+        text-align: center;
     }
     .main_stat_indiv {
         display: flex;
@@ -925,6 +932,7 @@
         height: 60px;
         width: auto;
         margin-bottom: 15px;
+        align-items: center;
     }
     .hyra {
         grid-area: hy;
@@ -967,10 +975,10 @@
         top: 0;
         width: 100%;
         background-color: salmon;
-        left: -100vw;
+        left: -120vw;
         transition: left 0.5s;
         z-index: 1;
-        /* box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75); */
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
     }
     .exitbutton {
         display: flex;
