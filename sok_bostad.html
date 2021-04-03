@@ -44,10 +44,10 @@
             </ul>
         </nav>
         <div id="sok_karta">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7663937.3601750955!2d17.37855505!3d62.0329754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1615377158852!5m2!1ssv!2sse" style="border:0;" allowfullscreen="" loading="fast"></iframe> <!--width="912" height="405"-->
+            <iframe class="karta" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7663937.3601750955!2d17.37855505!3d62.0329754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1615377158852!5m2!1ssv!2sse" style="border:0;" allowfullscreen="" loading="fast"></iframe> <!--width="912" height="405"-->
         </div>
-        <div class="menu-button" >
-            <p id="material-icons">Visa filter</p>
+        <div class="visa_filter_div">
+            <button type="button" class="visa_filter_button">Visa filter</button>
         </div>
         <div id="sok_filter">
             <div class="insok_filter">
@@ -80,7 +80,7 @@
                     <div class="titel">
                         <legend>Antal rum</legend>
                         <div class="ininantalrum">
-                            <select name="minantalrum" class="antalrum" autocomplete="off">
+                            <select class="antalrum">
                                 <option value selected>Min</option>
                                 <option value="1">Min 1 rum</option>
                                 <option value="2">Min 2 rum</option>
@@ -88,7 +88,7 @@
                                 <option value="4">Min 4 rum</option>
                                 <option value="5">Min 5 rum</option>
                             </select>
-                            <select name="maxantalrum" class="antalrum" autocomplete="off">
+                            <select class="antalrum">
                                 <option value selected>Max</option>
                                 <option value="1">Max 1 rum</option>
                                 <option value="2">Max 2 rum</option>
@@ -98,9 +98,9 @@
                             </select>
                         </div>
                     </div>
-                    <div class="titel">
+                    <div id="mobil_hyra" class="titel">
                         <legend>Hyra</legend>
-                        <select name="maxhyra" id="maxhyra" class="antalrum" autocomplete="off">
+                        <select id="maxhyra" class="antalrum">
                             <option value selected>Max</option>
                             <option value="5000">Max 5 000 kr</option>
                             <option value="10000">Max 10 000 kr</option>
@@ -113,10 +113,8 @@
             </div>
         </div>
         <footer class="filterfooter">
-                <div>212 bostäder</div>
-                <div>
-                    <button type="button" name="filterbutton" id="filtrerabutton">Filtrera</button>
-                </div>
+            <div>212 bostäder</div>
+            <button type="button" id="filtrerabutton">Filtrera</button>
         </footer>
     </div>
     <script src="js/main.js"></script>
