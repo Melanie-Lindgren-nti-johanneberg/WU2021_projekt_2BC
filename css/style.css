@@ -3,8 +3,23 @@
     margin: 0;
     padding: 0;
 }
-/*rem em*/
 @media screen and (min-width: 801px) /*Dator*/ {
+    .logga_a {
+        display: flex;
+        align-items: center;
+        text-decoration: underline white;
+    }
+    .logga_bild {
+        height: 80px;
+        width: auto;
+        margin: 0 20px 0 20px;
+    }
+    .logga_text {
+        color: #333333d8;
+        font-size: 40px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: 1.2px;
+    }
     #index {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -151,10 +166,10 @@
         font-size: 25px;
         margin: 10px 0 10px 0;
     }
-    #nykommande_byggnader {
+    #nykommande_bostader {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 20vh 10vh 100vh auto;
+        grid-template-rows: 20vh 10vh auto auto;
         grid-template-areas:
         'hd hd hd'
         'na na na'
@@ -190,11 +205,69 @@
     .hem_igen_a {
         text-decoration: none;
         color: rgb(192, 54, 54);
-        /* color: rgb(29, 29, 212); */
     }
-    img {
-        height: 100px;
-        width: 90vw;
+    .nykommande_bostader_main_bild_div {
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+    }
+    .nykommande_bostader_main_h1_p {
+        font-family: sans-serif;
+        letter-spacing: 1.5px;
+        line-height: 30px;
+    }
+    .nykommande_bostader_h1 {
+        font-size: 48px;
+        letter-spacing: 1.5px;
+        color: #333333d8;
+        margin: 20px 0 20px 0;
+    }
+    .nykommande_bostader_p {
+        font-size: 20px;
+    }
+    .nykommande_bostader_main_bild {
+        width: 100%;
+        margin: 20px 0 20px 0;
+    }
+    .nybyggnadsprojekt_div_allt {
+        color: #333333d8;
+        font-family: sans-serif;
+        margin: 0 20px 30px 20px;
+    }
+    .nybyggnadsprojekt {
+        margin: 0 10px 10px 10px;
+        font-family: sans-serif;
+        font-size: 30px;
+        letter-spacing: 1.5px;
+        color: #333333d8;
+    }
+    .nybyggnadsprojekt_div {
+        display: flex;
+    }
+    .nybyggnadsprojekt_div_uppdelat_i_2 {
+        display: flex;
+        height: 10rem;
+        width: 100%;
+        margin: 10px;
+        border: rgba(192, 54, 54, 0.664) solid 1px;
+    }
+    .nybyggnadsprojekt_bild {
+        height: 80px;
+        width: 80px;
+        margin: 20px;
+    }
+    .info_nybyggnadsprojekt {
+        margin: 20px 0 0 0;
+        line-height: 1.5;
+        letter-spacing: 1.5px;
+    }
+    .nybyggnadsprojekt_p {
+        padding-bottom: 5px;
+    }
+    .nybyggnadsprojekt_h5 {
+        color: rgba(192, 54, 54);
+        padding: 0 0 10px 0;
+        font-size: 20px;
     }
     #om_oss {
         display: grid;
@@ -326,7 +399,6 @@
         position: relative;
         margin-left: 60px;
         background-color: rgb(247, 247, 247);
-        /* overflow: scroll; */
     }
     .insok_filter {
         display: block;
@@ -355,7 +427,6 @@
         border: none;
         background: none;
         color: rgb(192, 54, 54);
-        /* color: rgb(29, 29, 212); */
         text-decoration: underline;
     }
     legend {
@@ -565,15 +636,15 @@
         text-decoration: none;
         color: white;
         padding: 1.1rem;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        /* padding: 17.5px 70px; */
+        height: 100%;
+        width: auto;
+        padding-left: 30px;
+        padding-right: 30px;
         transition-duration: 0.1s;
         cursor: pointer;
         font-family: 'Courier New', Courier, monospace;
         font-weight: 700;
         letter-spacing: 1.5px;
-        /* font-family: sans-serif; */
         font-size: 20px;
     }
     .navnav:hover {
@@ -619,6 +690,9 @@
     .footer_p {
         max-width: 29ch;
     }
+    .visa_filter_div {
+        display: none;
+    }
     h3 {
         color: #333333d8;
     }
@@ -631,6 +705,18 @@
 
 
 @media screen and (max-width: 800px) /*Mobil*/ {
+    .logga_div {
+        display: flex;
+        align-items: center;
+    }
+    .logga_bild {
+        height: 80px;
+        width: auto;
+        margin: 0 20px 0 20px;
+    }
+    .logga_text {
+        display: none;
+    }
     #index {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -777,10 +863,10 @@
     .visa_alla_bostader:hover {
         text-decoration: underline;
     }
-    #nykommande_byggnader {
+    #nykommande_bostader {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 100px 3px 100vh auto;
+        grid-template-rows: 100px 3px auto auto;
         grid-template-areas:
         'hd hd hd'
         'na na na'
@@ -813,14 +899,80 @@
         content: "/";
         padding: 0 10px 0 10px;
     }
-    a {
+    .hem_igen_a {
         text-decoration: none;
         color: rgb(192, 54, 54);
-        /* color: rgb(29, 29, 212); */
+    }
+    .nykommande_bostader_main_bild_div {
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+    }
+    .nykommande_bostader_main_h1_p {
+        font-family: sans-serif;
+        letter-spacing: 1.5px;
+        line-height: 30px;
+    }
+    .nykommande_bostader_h1 {
+        font-size: 40px;
+        letter-spacing: 1.5px;
+        color: #333333d8;
+        margin: 20px 0 20px 0;
+    }
+    .nykommande_bostader_p {
+        font-size: 20px;
+    }
+    .nykommande_bostader_main_bild {
+        width: 100%;
+        height: auto;
+        margin: 20px 0 20px 0;
     }
     img {
         height: 100px;
         width: 90vw;
+    }
+    .nybyggnadsprojekt_div_allt {
+        color: #333333d8;
+        font-family: sans-serif;
+        margin: 0 20px 30px 20px;
+    }
+    .nybyggnadsprojekt {
+        margin: 0 10px 20px 10px;
+        font-family: sans-serif;
+        font-size: 30px;
+        letter-spacing: 1.5px;
+        color: #333333d8;
+    }
+    .nybyggnadsprojekt_div {
+        display: flex;
+        flex-direction: column;
+    }
+    .nybyggnadsprojekt_div_uppdelat_i_2 {
+        display: flex;
+        height: auto;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: rgba(192, 54, 54, 0.664) solid 1px;
+    }
+    .nybyggnadsprojekt_bild {
+        height: 80px;
+        width: 80px;
+        margin: 20px;
+    }
+    .info_nybyggnadsprojekt {
+        margin: 20px 0 0 0;
+        line-height: 1.5;
+        letter-spacing: 1.5px;
+    }
+    .nybyggnadsprojekt_p {
+        padding-bottom: 5px;
+        font-size: 25px;
+    }
+    .nybyggnadsprojekt_h5 {
+        color: rgba(192, 54, 54);
+        padding: 0 0 10px 0;
+        font-size: 30px;
     }
     #om_oss {
         display: grid;
@@ -1175,7 +1327,7 @@
     }
     #mobile_nav {
         height: 100%;
-        position: fixed; /*??? absolute*/
+        position: fixed;
         top: 0;
         width: 100%;
         background-color: salmon;
