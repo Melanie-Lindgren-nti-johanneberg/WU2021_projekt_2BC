@@ -11,28 +11,32 @@ function closeNav() {
 }
 
 //Mobil - Filter meny
-// document.querySelector(".visa_filter_div").addEventListener("click",visaFilter)
+document.querySelector(".visa_filter_button").addEventListener("click",myFunction)
 
-// // document.querySelector(".exitbutton").addEventListener("click",closeNav)
+function myFunction() {
+    var element = document.getElementById("sok_filter");
+    element.classList.toggle("show");
 
-// // button.addEventListener("click", function () {
-// //     content.innerHTML = "Och denna text dyker fram";
-// // })
-
-// function visaFilter() {
-//     document.getElementById("sok_filter").style.bottom = "0";
-// }
-// function döljFilter() {
-//     document.getElementById("sok_filter").style.bottom = "-120vh";
-// }
-
-document.querySelector(".fade-layer").addEventListener("click",showMenu)
-
-document.querySelector(".visa_filter_button").addEventListener("click",visaFilter)
-
-function visaFilter() {
-    let menu = document.querySelector("#sok_filter");
-    menu.classList.toggle("show");
-    // let layor = document.querySelector(".fade-layer");
-    // layor.classList.toggle("visible")
+    if (document.querySelector(".visa_filter_button").innerHTML === "Dölj filter") {
+        document.querySelector(".visa_filter_button").innerHTML = "Visa filter";
+    } else {
+        document.querySelector(".visa_filter_button").innerHTML = "Dölj filter";
+    }
 }
+
+//Datum indexsida
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
+
+// let today = new Date().toISOString().slice(0, 10);
+
+// console.log(today);
+
+document.querySelector(".date").innerHTML = today;
+// today = mm + '/' + dd + '/' + yyyy;
+// document.write(today);

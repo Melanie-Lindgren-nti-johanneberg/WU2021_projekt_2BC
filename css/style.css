@@ -8,13 +8,13 @@
     #index {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 20vh 10vh 70vh auto 100vh auto;
+        grid-template-rows: 20vh 10vh auto auto auto auto;
         grid-template-areas:
         'hd hd hd'
         'na na na'
         'ma ma as'
         'md md md'
-        'm2 m2 a6'
+        'm2 m2 m2'
         'ft ft ft'
         ;
     }
@@ -24,10 +24,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        color: #333333d8;
     }
-    /* .index_main {
-        
-    } */
     .overindex_h1 {
         display: flex;
         align-items: center;
@@ -35,14 +33,14 @@
     .index_tal_h1 {
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 100px;
-        color: #333333;
+        color: #333333d8;
         margin: 5px;
         font-weight: normal;
     }
     .index_h1 {
         font-family: sans-serif;
         font-size: 50px;
-        color: #333333;
+        color: #333333d8;;
         margin: 5px;
         font-weight: normal;
         letter-spacing: 1.2px;
@@ -56,23 +54,102 @@
     .index_aside {
         grid-area: as;
         border-left: rgba(192, 54, 54, 0.664);
-        border-width: 3px;
-        border-left-style: dashed;
+        border-width: 2px;
+        border-left-style: solid;
         margin-top: 20px;
         margin-bottom: 20px;
+        padding: 0 20px 0 20px;
     }
     .senaste_annonserade {
-        font-family: sans-serif;
-        margin: 30px;
         font-weight: 700;
+        font-size: 25px;
+        margin: 10px 0 10px 0;
+        color: #333333d8;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .senaste_annonserade_innre_div {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0 20px 0;
+        font-family: sans-serif;
+        border-bottom: rgba(192, 54, 54, 0.664) dotted 2px;
+    }
+    .date {
+        font-size: 1.4rem;
+        letter-spacing: 1.2px;
+        color: #333333d8;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .senaste_annonserade_platser {
+        letter-spacing: 1.3px;
+        line-height: 1.9;
+        margin-left: 10px;
+        font-size: 1.3rem;
+        cursor: pointer;
+        color: rgba(192, 54, 54);
+    }
+    .senaste_annonserade_platser:hover {
+        text-decoration: underline;
+    }
+    .visa_alla_bostader {
+        font-family: sans-serif;
         font-size: 20px;
+        margin: 20px 0 20px 0;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+        color: rgba(192, 54, 54);
+        font-weight: 700;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .visa_alla_bostader:hover {
+        text-decoration: underline;
     }
     .mitten_del {
         grid-area: md;
         border-bottom: rgba(192, 54, 54, 0.664);
-        border-bottom-width: 1.5px;
+        border-bottom-width: 0.5px;
         border-bottom-style: solid;
         margin: 0 20px 0 20px;
+    }
+    .index_main_2 {
+        grid-area: m2;
+        padding: 50px;
+        font-family: sans-serif;
+        color: #333333d8;
+        letter-spacing: 1.5px;
+        line-height: 1.5;
+    }
+    .hitta_ditt_nya_hem_div {
+        width: 100%;
+        padding-bottom:  40px;
+        border-bottom: rgba(192, 54, 54, 0.664) dashed 1.5px;
+        margin-bottom: 50px;
+    }
+    .hitta_ditt_nya_hem {
+        padding: 10px 0 10px 0;
+    }
+    .hitta_ditt_nya_hem_och_bild_med_text_p {
+        font-size: 20px;
+        max-width: 70ch;
+    }
+    .tva_bilder_med_text_index {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .bild_med_text_index {
+        width: 40vw;
+        border-bottom: rgba(192, 54, 54, 0.664) dashed 1.5px;
+    }
+    .bild_index {
+        height: 400px;
+        width: auto;
+    }
+    .bild_med_text_h3_index {
+        font-size: 25px;
+        margin: 10px 0 10px 0;
     }
     #nykommande_byggnader {
         display: grid;
@@ -144,14 +221,14 @@
         font-family: sans-serif;
         font-size: 48px;
         letter-spacing: 1.5px;
-        color: #333333;
+        color: #333333d8;
         margin-left: 2vw;
         margin-bottom: 20px;
     }
     .om_oss_p {
         max-width: 60ch;
         font-family: sans-serif;
-        color: #333333;
+        color: #333333d8;
         font-size: 20px;
         line-height: 1.7;
         letter-spacing: 1.2px;
@@ -189,7 +266,7 @@
         margin-bottom: 10px;
         max-width: 60ch;
         font-family: sans-serif;
-        color: #333333;
+        color: #333333d8;
         font-size: 20px;
         line-height: 1.7;
         letter-spacing: 1.2px;
@@ -287,13 +364,13 @@
         margin-bottom: 10px;
         font-family: sans-serif;
         font-size: 25px;
-        color: #333333;
+        color: #333333d8;
     }
     .checkbox {
         display: flex;
         padding: 15px 0 16px 0;    
         align-items: center;
-        color: #333333;
+        color: #333333d8;
     }
     .incheckbox {
         height: 25px;
@@ -364,7 +441,7 @@
         font-family: sans-serif;
         font-size: 48px;
         letter-spacing: 1.5px;
-        color: #333333;
+        color: #333333d8;
         position: absolute;
         bottom: 0;
         margin-left: 30px;
@@ -386,7 +463,7 @@
         'ti ti se se'
         ;
     }
-    #main_stat_div {
+    .main_stat_div {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -396,7 +473,9 @@
         font-size: 20px;
         font-weight: 700;
         cursor: pointer;
-        
+    }
+    .main_stat_div:hover {
+        text-decoration-line: underline;
     }
     .main_stat_indiv {
         display: flex;
@@ -407,27 +486,27 @@
         width: auto;
         margin-bottom: 15px;
     }
-    .hyra {
+    #hyra {
         grid-area: hy;
         background: salmon;
     }
-    .tid {
+    #tid {
         grid-area: ti;
         background: salmon;
     }
-    .monad {
+    #monad {
         grid-area: mo;
         background: salmon;
     }
-    .ko {
+    #ko {
         grid-area: ko;
         background: salmon;
     }
-    .summering {
+    #summering {
         grid-area: su;
         background: salmon;
     }
-    .senaste {
+    #senaste {
         grid-area: se;
         background: salmon;
     }
@@ -456,7 +535,7 @@
     }
     .navhead {
         text-decoration: none;
-        color: #333333;
+        color: #333333d8;
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -491,7 +570,10 @@
         /* padding: 17.5px 70px; */
         transition-duration: 0.1s;
         cursor: pointer;
-        font-family: sans-serif;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        /* font-family: sans-serif; */
         font-size: 20px;
     }
     .navnav:hover {
@@ -512,7 +594,7 @@
         display: flex;
         justify-content: space-evenly;
         margin: 60px 0 40px 0;
-        color: #333333;
+        color: #333333d8;
     }
     .inoutfoot {
         padding: 0 20px 0 20px;
@@ -537,6 +619,9 @@
     .footer_p {
         max-width: 29ch;
     }
+    h3 {
+        color: #333333d8;
+    }
 }
 
 
@@ -549,14 +634,14 @@
     #index {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 100px 3px auto auto 20px 10vh auto;
+        grid-template-rows: 100px 3px auto auto 20px auto auto;
         grid-template-areas:
         'hd hd hd'
         'na na na'
         'ma ma ma'
         'as as as'
         'md md md'
-        'm2 m2 a6'
+        'm2 m2 m2'
         'ft ft ft'
         ;
     }
@@ -566,11 +651,58 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        min-height: 200px;
+        min-height: 500px;
     }
-    /* .index_main {
-        
-    } */
+    .index_main_2 {
+        grid-area: m2;
+        padding: 50px;
+        font-family: sans-serif;
+        color: #333333d8;
+        letter-spacing: 1.5px;
+        line-height: 1.5;
+    }
+    .hitta_ditt_nya_hem_div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom:  40px;
+        border-bottom: rgba(192, 54, 54, 0.664) dashed 1.5px;
+        margin-bottom: 50px;
+    }
+    .hitta_ditt_nya_hem {
+        padding: 10px 0 10px 0;
+    }
+    .hitta_ditt_nya_hem_och_bild_med_text_p {
+        font-size: 20px;
+        max-width: 70ch;
+    }
+    .mitten_del {
+        grid-area: md;
+        margin: 0 20px 0 20px;
+    }
+    .tva_bilder_med_text_index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .bild_med_text_index {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: rgba(192, 54, 54, 0.664) dashed 1.5px;
+        margin-top: 30px;
+    }
+    .bild_index {
+        height: 390px;
+        width: auto;
+        padding-bottom: 10px;
+    }
+    .bild_med_text_h3_index {
+        font-size: 25px;
+        margin: 10px 0 10px 0;
+    }
     .overindex_h1 {
         display: flex;
         align-items: center;
@@ -578,14 +710,14 @@
     .index_tal_h1 {
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 65px;
-        color: #333333;
+        color: #333333d8;
         margin: 5px;
         font-weight: normal;
     }
     .index_h1 {
         font-family: sans-serif;
         font-size: 30px;
-        color: #333333;
+        color: #333333d8;
         margin: 5px;
         font-weight: normal;
         font-weight: 700;
@@ -598,21 +730,52 @@
     }
     .index_aside {
         grid-area: as;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 20px 0 20px 0;
+        padding: 0 20px 0 20px;
     }
     .senaste_annonserade {
-        font-family: sans-serif;
-        margin: 30px;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 30px;
+        margin: 10px 0 10px 0;
+        color: #333333d8;
+        font-family: 'Courier New', Courier, monospace;
     }
-    .mitten_del {
-        grid-area: md;
-        border-bottom: rgba(192, 54, 54, 0.664);
-        border-bottom-width: 1.5px;
-        border-bottom-style: solid;
-        margin: 0 20px 0 20px;
+    .senaste_annonserade_innre_div {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0 20px 0;
+        font-family: sans-serif;
+        border-bottom: rgba(192, 54, 54, 0.664) dotted 2px;
+    }
+    .date {
+        font-size: 2rem;
+        letter-spacing: 1.2px;
+        color: #333333d8;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .senaste_annonserade_platser {
+        letter-spacing: 1.3px;
+        line-height: 1.9;
+        margin-left: 10px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: rgba(192, 54, 54);
+    }
+    .senaste_annonserade_platser:hover {
+        text-decoration: underline;
+    }
+    .visa_alla_bostader {
+        font-family: sans-serif;
+        font-size: 20px;
+        margin: 20px 0 20px 0;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+        color: rgba(192, 54, 54);
+        font-weight: 700;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .visa_alla_bostader:hover {
+        text-decoration: underline;
     }
     #nykommande_byggnader {
         display: grid;
@@ -676,38 +839,39 @@
     }
     .om_oss_div {
         display: flex;
-        margin-top: 33px;
+        margin-top: 40px;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 40px;
     }
     .om_oss_h1 {
         display: block;
         font-family: sans-serif;
         font-size: 48px;
         letter-spacing: 1.5px;
-        color: #333333;
+        color: #333333d8;
         margin-bottom: 20px;
         margin: 20px;
     }
     .om_oss_p {
         max-width: 50ch;
         font-family: sans-serif;
-        color: #333333;
+        color: #333333d8;
         font-size: 20px;
         line-height: 1.7;
         letter-spacing: 1.2px;
-        margin: 20px;
+        margin: 40px 20px 20px 20px;
     }
     .proffsig_byggnad {
         width: 550px;
         height: auto;
-        margin: 20px;
+        margin: 40px 20px 20px 20px;
     }
     .om_oss_article {
         grid-area: oa;
     }
     .inarticlealla {
-        margin: 50px;
+        margin: 50px 20px;
     }
     h3 {
         font-family: sans-serif;
@@ -719,7 +883,7 @@
         margin-bottom: 10px;
         max-width: 60ch;
         font-family: sans-serif;
-        color: #333333;
+        color: #333333d8;
         font-size: 20px;
         letter-spacing: 1.2px;
     }
@@ -767,12 +931,12 @@
     .karta {
         width: 100vw;
         height: 917px;
+        z-index: 5;
     }
     .visa_filter_div {
         grid-area: vd;
         display: flex;
-        position: relative;
-        padding: 10px 30px;
+        padding: 8px 30px;
         align-items: center;
         flex-direction: row-reverse;
         width: 100vw;
@@ -789,21 +953,28 @@
         border-color: rgb(240, 221, 221);
         border-radius: 3px;
         border-width: 5px;
-        height: 45px;
-        width: 100px;
+        height: 40px;
+        width: 150px;
+        font-size: 20px;
+        letter-spacing: 1.3px;
     }
     #sok_filter {
         display: flex;
+        position: absolute;
+        bottom: -100vh;
+        max-height: 917px;
         flex-direction: column;
         width: 100vw;
         font-size: 20px;
         line-height: 30px;
         background-color: rgb(247, 247, 247);
     }
+    .show {
+        top: 103px;
+    }
     .insok_filter {
         display: block;
-        overflow-x: hidden;
-        overflow-y: auto;
+        overflow: hidden;
         padding: 30px 30px 0 30px;
     }
     .insok_filter::-webkit-scrollbar {
@@ -835,13 +1006,13 @@
         margin-bottom: 10px;
         font-family: sans-serif;
         font-size: 30px;
-        color: #333333;
+        color: #333333d8;
     }
     .checkbox {
         display: flex;
         padding: 15px 0 15px 0;    
         align-items: center;
-        color: #333333;
+        color: #333333d8;
     }
     .incheckbox {
         height: 40px;
@@ -866,12 +1037,13 @@
         flex-direction: column;
     }
     .antalrum {
-        padding: 20px;
+        padding: 15px;
         border-radius: 3px;
         font-size: 30px;
         margin-bottom: 1rem;
     }
     #mobil_hyra {
+        margin: 0;
         display: flex;
         flex-direction: column;
     }
@@ -895,6 +1067,7 @@
         border-color: rgb(240, 221, 221);
         border-radius: 3px;
         border-width: 5px;
+        font-size: 19px;
     }
     #statistik {
         display: grid;
@@ -917,7 +1090,7 @@
         font-family: sans-serif;
         font-size: 48px;
         letter-spacing: 1.5px;
-        color: #333333;
+        color: #333333d8;
         position: absolute;
         bottom: 0;
         margin-left: 2vw;
@@ -938,7 +1111,7 @@
         'ti se'
         ;
     }
-    #main_stat_div {
+    .main_stat_div {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -952,6 +1125,9 @@
         letter-spacing: 1.2px;
         text-align: center;
     }
+    .main_stat_div:hover {
+        text-decoration-line: underline;
+    }
     .main_stat_indiv {
         display: flex;
         align-items: center;
@@ -962,27 +1138,27 @@
         margin-bottom: 15px;
         align-items: center;
     }
-    .hyra {
+    #hyra {
         grid-area: hy;
         background: salmon;
     }
-    .tid {
+    #tid {
         grid-area: ti;
         background: salmon;
     }
-    .monad {
+    #monad {
         grid-area: mo;
         background: salmon;
     }
-    .ko {
+    #ko {
         grid-area: ko;
         background: salmon;
     }
-    .summering {
+    #summering {
         grid-area: su;
         background: salmon;
     }
-    .senaste {
+    #senaste {
         grid-area: se;
         background: salmon;
     }
@@ -1003,7 +1179,7 @@
         top: 0;
         width: 100%;
         background-color: salmon;
-        left: -120vw;
+        left: -200vw;
         transition: left 0.5s;
         z-index: 1;
         box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
@@ -1084,7 +1260,7 @@
     }
     .navhead {
         text-decoration: none;
-        color: #333333;
+        color: #333333d8;
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -1146,7 +1322,7 @@
     .big_foot {
         display: flex;
         margin: 60px 0 40px 0;
-        color: #333333;
+        color: #333333d8;
         flex-direction: column;
     }
     .inoutfoot {
