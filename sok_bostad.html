@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
             </div>
             <ul id="navi_mobile">
                 <li class="nav_li"><a class="navnav" href="sok_bostad.html">Sök bostad</a></li>
-                <li class="nav_li"><a class="navnav" href="nykommande_byggnader.html">Nykommande bostäder</a></li>
+                <li class="nav_li"><a class="navnav" href="kommande_byggnader.html">Kommande bostäder</a></li>
                 <li class="nav_li"><a class="navnav" href="statistik.html">Statistik</a></li>
                 <li class="nav_li"><a class="navnav" href="om_oss.html">Om oss</a></li>
             </ul>
@@ -34,15 +34,15 @@
                 <h2 class="logga_text">Fasakronan fastigheter</h2>
             </a>
             <ul id="head">
-                <li id="ikon_li_bort" class="ikon_li"><a class="navhead" href="#"><img class="ikon" src="img/fragor_och_svar_ikon.png" alt="Ikon med två pratbubblor">FRÅGOR & SVAR</a></li>
-                <li id="ikon_li_bort" class="ikon_li"><a class="navhead" href="#"><img class="ikon" src="img/kundservice_ikon.png" alt="Ikon med tre små gubbar med en stor längst fram och två mindre bakom">KUNDSERVICE</a></li>
+                <li id="ikon_li_bort_1" class="ikon_li"><a class="navhead" href="#"><img class="ikon" src="img/fragor_och_svar_ikon.png" alt="Ikon med två pratbubblor">FRÅGOR & SVAR</a></li>
+                <li id="ikon_li_bort_2" class="ikon_li"><a class="navhead" href="#"><img class="ikon" src="img/kundservice_ikon.png" alt="Ikon med tre små gubbar med en stor längst fram och två mindre bakom">KUNDSERVICE</a></li>
                 <li class="ikon_li"><a class="navhead" href="#"><img class="ikon" src="img/inlogg_ikon_2.png" alt="Ikon med en förenklad överkropp">LOGGA IN</a></li>
             </ul>
         </header>
         <nav class="mainnav">
             <ul id="navi">
                 <li><a class="navnav" href="sok_bostad.html">Sök bostad</a></li>
-                <li><a class="navnav" href="nykommande_byggnader.html">Nykommande bostäder</a></li>
+                <li><a class="navnav" href="kommande_byggnader.html">Kommande bostäder</a></li>
                 <li><a class="navnav" href="statistik.html">Statistik</a></li>
                 <li><a class="navnav" href="om_oss.html">Om oss</a></li>
             </ul>
@@ -59,7 +59,8 @@
                 <div class="filterdiv">
                     <div class="ininsok_filter">
                         <div class="titel_checkboxes">
-                            <legend>Boendetyp</legend>
+                            <div class="legend">Boendetyp</div>
+                        </div>
                         <div class="checkbox">
                             <input type="checkbox" id="alla" class="incheckbox">
                             <label for="alla" class="labelalla">Alla (212)</label>
@@ -82,7 +83,7 @@
                         </div>
                     </div>
                     <div class="titel">
-                        <legend>Antal rum</legend>
+                        <div class="legend">Antal rum</div>
                         <div class="ininantalrum">
                             <select class="antalrum">
                                 <option value selected>Min</option>
@@ -103,7 +104,7 @@
                         </div>
                     </div>
                     <div id="mobil_hyra" class="titel">
-                        <legend>Hyra</legend>
+                        <div class="legend">Hyra</div>
                         <select id="maxhyra" class="antalrum">
                             <option value selected>Max</option>
                             <option value="5000">Max 5 000 kr</option>
@@ -115,11 +116,11 @@
                     </div>
                 </div>
             </div>
+            <footer class="filterfooter">
+                <div>212 bostäder</div>
+                <button id="filtrerabutton">Filtrera</button>
+            </footer>
         </div>
-        <footer class="filterfooter">
-            <div>212 bostäder</div>
-            <button id="filtrerabutton">Filtrera</button>
-        </footer>
     </div>
     <script src="js/main.js"></script>
 </body>

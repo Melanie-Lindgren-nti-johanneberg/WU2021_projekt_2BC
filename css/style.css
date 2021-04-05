@@ -166,7 +166,7 @@
         font-size: 25px;
         margin: 10px 0 10px 0;
     }
-    #nykommande_bostader {
+    #kommande_bostader {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 20vh 10vh auto auto;
@@ -206,26 +206,26 @@
         text-decoration: none;
         color: rgb(192, 54, 54);
     }
-    .nykommande_bostader_main_bild_div {
+    .kommande_bostader_main_bild_div {
         display: flex;
         flex-direction: column;
         margin: 30px;
     }
-    .nykommande_bostader_main_h1_p {
+    .kommande_bostader_main_h1_p {
         font-family: sans-serif;
         letter-spacing: 1.5px;
         line-height: 30px;
     }
-    .nykommande_bostader_h1 {
+    .kommande_bostader_h1 {
         font-size: 48px;
         letter-spacing: 1.5px;
         color: #333333d8;
         margin: 20px 0 20px 0;
     }
-    .nykommande_bostader_p {
+    .kommande_bostader_p {
         font-size: 20px;
     }
-    .nykommande_bostader_main_bild {
+    .kommande_bostader_main_bild {
         width: 100%;
         margin: 20px 0 20px 0;
     }
@@ -429,7 +429,7 @@
         color: rgb(192, 54, 54);
         text-decoration: underline;
     }
-    legend {
+    .legend {
         display: block;
         font-weight: 700;
         margin-bottom: 10px;
@@ -863,7 +863,7 @@
     .visa_alla_bostader:hover {
         text-decoration: underline;
     }
-    #nykommande_bostader {
+    #kommande_bostader {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 100px 3px auto auto;
@@ -903,26 +903,26 @@
         text-decoration: none;
         color: rgb(192, 54, 54);
     }
-    .nykommande_bostader_main_bild_div {
+    .kommande_bostader_main_bild_div {
         display: flex;
         flex-direction: column;
         margin: 30px;
     }
-    .nykommande_bostader_main_h1_p {
+    .kommande_bostader_main_h1_p {
         font-family: sans-serif;
         letter-spacing: 1.5px;
         line-height: 30px;
     }
-    .nykommande_bostader_h1 {
+    .kommande_bostader_h1 {
         font-size: 40px;
         letter-spacing: 1.5px;
         color: #333333d8;
         margin: 20px 0 20px 0;
     }
-    .nykommande_bostader_p {
+    .kommande_bostader_p {
         font-size: 20px;
     }
-    .nykommande_bostader_main_bild {
+    .kommande_bostader_main_bild {
         width: 100%;
         height: auto;
         margin: 20px 0 20px 0;
@@ -1096,7 +1096,7 @@
         border-top-color: salmon;
         border-top-width: 5px;
         border-top-style: solid;
-        background-color: white;
+        background-color: #ffffff;
         font-family: sans-serif;
         font-weight: bolder;
     }
@@ -1152,7 +1152,7 @@
         color: rgb(192, 54, 54);
         text-decoration: underline;
     }
-    legend {
+    .legend {
         display: block;
         font-weight: 700;
         margin-bottom: 10px;
@@ -1407,7 +1407,10 @@
     .ikon_li {
         display: flex;
     }
-    #ikon_li_bort {
+    #ikon_li_bort_1 {
+        display: none;
+    }
+    #ikon_li_bort_2 {
         display: none;
     }
     .navhead {
@@ -1466,7 +1469,7 @@
     }
     .foot {
         grid-area: ft;
-        background: rgb(247, 226, 224);
+        background: #f7e2e0;
         border-top: rgb(212, 192, 189);
         border-top-width: 1px;
         border-top-style: solid;
